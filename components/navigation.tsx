@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, BarChart3, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -53,10 +54,18 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="#inicio" onClick={handleNavClick} className="flex items-center space-x-2">
-            <BarChart3 className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
-              Consultoría Elite
-            </span>
+            {/* Placeholder logo. Replace `prisma360-logo.svg` with actual logo file. */}
+            <Image
+              src="/prisma360-logo.svg"
+              alt="Prisma360 Consultora logo"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+            <div className="leading-tight">
+              <span className="block text-xl font-bold text-primary">prisma360</span>
+              <span className="block text-xs text-brand">consultora</span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
