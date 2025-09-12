@@ -106,27 +106,6 @@ const services = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: "Daniel Rodríguez",
-    role: "CEO & Estratega Senior",
-    description: "15+ años transformando empresas",
-    initials: "DR",
-  },
-  {
-    name: "Laura Martínez",
-    role: "Directora Financiera",
-    description: "Experta en optimización financiera",
-    initials: "LM",
-  },
-  {
-    name: "Carlos Sánchez",
-    role: "Director de Operaciones",
-    description: "Especialista en procesos y eficiencia",
-    initials: "CS",
-  },
-];
-
 export default function Home() {
   useEffect(() => {
     // Add smooth scroll behavior
@@ -317,29 +296,59 @@ export default function Home() {
               Expertos comprometidos con su éxito
             </p>
           </div>
-          <div className="container grid gap-8 md:grid-cols-3">
-            {teamMembers.map((member, index) => (
-              <div
-                key={member.name}
-                className={cn(
-                  "flex flex-col items-center space-y-4 text-center p-6 rounded-xl hover:bg-muted/50 transition-all duration-300",
-                  "animate-in fade-in slide-in-from-bottom-4 fill-mode-both"
-                )}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="relative group">
-                  <div className="h-24 w-24 rounded-full bg-gradient-to-br from-primary to-brand flex items-center justify-center text-white font-bold text-2xl group-hover:scale-110 transition-transform">
-                    {member.initials}
-                  </div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-brand opacity-20 blur-xl group-hover:opacity-30 transition-opacity" />
-                </div>
-                <div className="space-y-1">
-                  <p className="font-semibold text-lg">{member.name}</p>
-                  <p className="text-sm text-primary font-medium">{member.role}</p>
-                  <p className="text-sm text-muted-foreground">{member.description}</p>
-                </div>
+          <div className="container grid gap-8 md:grid-cols-3 items-start">
+            <div className="flex flex-col items-center space-y-4 text-center md:col-span-1">
+              <div className="h-32 w-32 rounded-full bg-muted flex items-center justify-center text-muted-foreground">
+                <span className="text-sm">Foto</span>
               </div>
-            ))}
+              <div className="space-y-1">
+                <p className="font-semibold text-lg">Martín Latorre</p>
+                <p className="text-sm text-primary font-medium">Socio fundador</p>
+              </div>
+            </div>
+            <div className="md:col-span-2 space-y-8 text-left">
+              <div>
+                <h3 className="font-semibold uppercase text-sm tracking-wide mb-2">
+                  Experiencia profesional
+                </h3>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                  <li>
+                    Actualmente forma parte de la comisión fiscalizadora de
+                    Provincia Net S.A y Provinfondos S.A.
+                  </li>
+                  <li>
+                    Cuenta con 8 años de experiencia en gerenciamiento en
+                    organismos y empresas del sector público y privado.
+                  </li>
+                  <li>
+                    Ha conformado el Directorio de sociedades del rubro
+                    energético (Transener, Central Térmica Manuel Belgrano,
+                    Central Térmica San Martín, Transpa).
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold uppercase text-sm tracking-wide mb-2">
+                  Formación académica
+                </h3>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+                  <li>
+                    Contador Público – UBA (Universidad de Buenos Aires).
+                  </li>
+                  <li>
+                    Diplomatura en gestión de proyectos con financiamiento
+                    externo – UNTREF.
+                  </li>
+                  <li>
+                    Maestría interdisciplinaria en energía – CEAER UBA.
+                  </li>
+                  <li>
+                    Posgrado en Administración de Negocios – Universidad de
+                    Belgrano.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </Section>
 
