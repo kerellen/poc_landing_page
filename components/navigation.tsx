@@ -54,7 +54,6 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="#inicio" onClick={handleNavClick} className="flex items-center space-x-2">
-            {/* Placeholder logo. Replace `prisma360-logo.svg` with actual logo file. */}
             <Image
               src="/logoPrisma360.png"
               alt="Prisma360 Consultora logo"
