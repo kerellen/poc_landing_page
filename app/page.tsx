@@ -298,8 +298,8 @@ export default function Home() {
           </div>
           <div className="container grid gap-8 md:grid-cols-3 items-start">
             <div className="flex flex-col items-center space-y-4 text-center md:col-span-1">
-              <div className="h-32 w-32 rounded-full bg-muted flex items-center justify-center text-muted-foreground">
-                <span className="text-sm">Foto</span>
+              <div className="h-32 w-32 rounded-full bg-muted flex items-center justify-center">
+                <span className="text-sm text-muted-foreground">Foto</span>
               </div>
               <div className="space-y-1">
                 <p className="font-semibold text-lg">Martín Latorre</p>
@@ -348,6 +348,17 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+          <div className="container mt-12">
+            <div className="aspect-video w-full">
+              <iframe
+                className="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Presentación de Martín Latorre"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </Section>
