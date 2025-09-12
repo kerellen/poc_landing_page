@@ -17,11 +17,11 @@ import Image from "next/image";
 
 const footerLinks = {
   servicios: [
-    { label: "Estrategia y Crecimiento", href: "#servicios" },
-    { label: "Análisis de Procesos", href: "#servicios" },
-    { label: "Auditoría de Costos", href: "#servicios" },
-    { label: "Análisis Financiero", href: "#servicios" },
-    { label: "Análisis de Rentabilidad", href: "#servicios" },
+    { label: "Planificación Económico Financiera", href: "#servicios" },
+    { label: "Outsourcing Administrativo", href: "#servicios" },
+    { label: "Administración Patrimonial", href: "#servicios" },
+    { label: "Mejora de Procesos", href: "#servicios" },
+    { label: "Eficiencia Energética", href: "#servicios" },
   ],
   empresa: [
     { label: "Sobre Nosotros", href: "#nosotros" },

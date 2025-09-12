@@ -17,12 +17,13 @@ import { Footer } from "@/components/footer";
 import { Stats } from "@/components/stats";
 import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
-import { 
-  TrendingUp, 
-  BarChart2, 
-  Calculator, 
-  DollarSign, 
-  PieChart,
+import {
+  LineChart,
+  ClipboardList,
+  Wallet,
+  Settings,
+  Leaf,
+  Mail,
   ArrowRight,
   Target,
   Sparkles,
@@ -33,34 +34,75 @@ import { cn } from "@/lib/utils";
 
 const services = [
   {
-    icon: TrendingUp,
-    title: "ESTRATEGIA Y CRECIMIENTO",
-    description: "Diseñamos e implementamos planes de negocio con estrategias de crecimiento y gestión organizacional, construyendo dashboards de seguimiento con BI.",
-    features: ["Plan estratégico", "Dashboard BI", "KPIs personalizados"],
+    icon: LineChart,
+    title: "PLANIFICACIÓN ECONÓMICO FINANCIERA",
+    description:
+      "El análisis estratégico de los datos de la organización y del contexto permitirá tomar decisiones adecuadas para gestionar correctamente las fluctuaciones del mercado.",
+    features: [
+      "Asesoramiento estratégico para la toma de decisiones",
+      "Herramientas financieras: cashflow, métricas y KPIs. Reportes de gestión",
+      "Elaboración y seguimiento del P&L. Estrategias de pricing",
+      "Planificación presupuestaria anual con revisiones periódicas",
+      "Redefinición de estrategias para el cumplimiento de metas",
+      "Gestión de inversiones con análisis de riesgos y oportunidades",
+    ],
   },
   {
-    icon: BarChart2,
-    title: "ANÁLISIS DE PROCESOS",
-    description: "Realizamos una revisión integral de todos los procesos claves para asegurar la optimización de recursos y controles necesarios para crecer de manera ordenada.",
-    features: ["Mapeo de procesos", "Optimización", "Control de calidad"],
+    icon: ClipboardList,
+    title: "OUTSOURCING ADMINISTRATIVO",
+    description:
+      "Delegar funciones y procesos repetitivos para mejorar la productividad y enfocarse en el core business.",
+    features: [
+      "Gestión contable: registros y conciliaciones bancarias",
+      "Administración de pagos y cobranzas",
+      "Gestión de proveedores y clientes",
+      "Gestión de nómina y recursos humanos",
+      "Liquidación de sueldos y cargas sociales",
+      "Administración de legajos y contratos",
+    ],
   },
   {
-    icon: Calculator,
-    title: "AUDITORÍA DE COSTOS",
-    description: "Relevamos y auditamos todos los costos asociados al negocio, asegurando integridad de la información mediante pruebas analíticas y sustantivas.",
-    features: ["Análisis detallado", "Reducción de gastos", "Informes ejecutivos"],
+    icon: Wallet,
+    title: "ADMINISTRACIÓN PATRIMONIAL",
+    description:
+      "Administración activa y profesional del capital para optimizar el rendimiento de las inversiones.",
+    features: [
+      "Perfil del inversor y estrategia adaptada",
+      "Construcción de porfolio personalizado",
+      "Determinación de activos por país y clase",
+      "Selección por industria y sector",
+      "Evaluación de rendimiento y rebalanceo de cartera",
+    ],
   },
   {
-    icon: DollarSign,
-    title: "ANÁLISIS FINANCIERO",
-    description: "Construimos modelo de Cash Flow proyectando todos los ingresos y egresos de la empresa para optimizar los tiempos de cobranzas y de pagos asegurando flujo de caja positivo.",
-    features: ["Cash Flow", "Proyecciones", "Optimización de capital"],
+    icon: Settings,
+    title: "MEJORA DE PROCESOS",
+    description:
+      "Identificar oportunidades de mejora e implementar soluciones que generen valor para la organización.",
+    features: [
+      "Diagnóstico y evaluación de procesos vigentes",
+      "Plan integral de oportunidades de mejora",
+      "Project management para la implementación",
+      "Reingeniería organizacional y reestructuración",
+      "Descripción de funciones y desarrollo organizacional",
+      "Implementación de sistemas de gestión",
+      "Certificaciones ISO 9001",
+    ],
   },
   {
-    icon: PieChart,
-    title: "ANÁLISIS DE RENTABILIDAD",
-    description: "Elaboramos un modelo de P&L (estado de resultados de gestión) a medida de cada empresa para monitorear la rentabilidad por cada unidad de negocio/producto/servicio.",
-    features: ["P&L personalizado", "Análisis por unidad", "Métricas clave"],
+    icon: Leaf,
+    title: "EFICIENCIA ENERGÉTICA",
+    description:
+      "Reducimos costos energéticos mediante proyectos de eficiencia, auditorías y gestión continua.",
+    features: [
+      "Diagnóstico y planificación de acciones",
+      "Optimización de procesos y reducción de desperdicios",
+      "Control de facturación y revisión de tarifas",
+      "Monitoreo energético y elaboración de KPIs",
+      "Capacitaciones para uso racional de la energía",
+      "Certificaciones ISO 50.001",
+      "Pago por resultados basado en el ahorro",
+    ],
   },
 ];
 
@@ -332,7 +374,7 @@ export default function Home() {
               <Card className="border-muted/50 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 text-center space-y-2">
                   <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-2">
-                    <DollarSign className="h-6 w-6 text-primary" />
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <p className="font-semibold">Email</p>
                   <p className="text-sm text-muted-foreground">contacto@consultoriaelite.com</p>
