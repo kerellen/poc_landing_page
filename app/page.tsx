@@ -1,26 +1,37 @@
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Section } from "@/components/ui/section";
 
 export default function Home() {
   return (
     <main className="font-sans">
       {/* Hero Section */}
-      <section className="text-center py-20 bg-gray-50">
-        <h1 className="text-4xl font-bold mb-4">Servicios</h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600">
-          Para implementar una estrategia de crecimiento exitosa, es esencial monitorear la rentabilidad por cada producto, por cada cliente y por cada unidad de negocio junto con un flujo financiero sustentable.
+      <Section className="text-center bg-gray-50">
+        <h1 className="mb-4 text-4xl font-bold">Servicios</h1>
+        <p className="mx-auto max-w-2xl text-lg text-gray-600">
+          Para implementar una estrategia de crecimiento exitosa, es esencial
+          monitorear la rentabilidad por cada producto, por cada cliente y por
+          cada unidad de negocio junto con un flujo financiero sustentable.
         </p>
-      </section>
+      </Section>
 
       {/* Services Section */}
-      <section className="py-16 container mx-auto px-4 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <Section className="container grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <Card>
           <CardHeader>
             <CardTitle>ESTRATEGIA Y CRECIMIENTO</CardTitle>
           </CardHeader>
           <CardContent>
             <CardDescription>
-              Diseñamos e implementamos planes de negocio con estrategias de crecimiento y gestión organizacional, construyendo dashboards de seguimiento con BI.
+              Diseñamos e implementamos planes de negocio con estrategias de
+              crecimiento y gestión organizacional, construyendo dashboards de
+              seguimiento con BI.
             </CardDescription>
           </CardContent>
         </Card>
@@ -30,7 +41,9 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <CardDescription>
-              Realizamos una revisión integral de todos los procesos claves para asegurar la optimización de recursos y controles necesarios para crecer de manera ordenada.
+              Realizamos una revisión integral de todos los procesos claves para
+              asegurar la optimización de recursos y controles necesarios para
+              crecer de manera ordenada.
             </CardDescription>
           </CardContent>
         </Card>
@@ -40,7 +53,9 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <CardDescription>
-              Relevamos y auditamos todos los costos asociados al negocio, asegurando integridad de la información mediante pruebas analíticas y sustantivas.
+              Relevamos y auditamos todos los costos asociados al negocio,
+              asegurando integridad de la información mediante pruebas
+              analíticas y sustantivas.
             </CardDescription>
           </CardContent>
         </Card>
@@ -50,7 +65,9 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <CardDescription>
-              Construimos modelo de Cash Flow proyectando todos los ingresos y egresos de la empresa para optimizar los tiempos de cobranzas y de pagos asegurando flujo de caja positivo.
+              Construimos modelo de Cash Flow proyectando todos los ingresos y
+              egresos de la empresa para optimizar los tiempos de cobranzas y de
+              pagos asegurando flujo de caja positivo.
             </CardDescription>
           </CardContent>
         </Card>
@@ -60,35 +77,40 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <CardDescription>
-              Elaboramos un modelo de P&L (estado de resultados de gestión) a medida de cada empresa para monitorear la rentabilidad por cada unidad de negocio/producto/servicio.
+              Elaboramos un modelo de P&L (estado de resultados de gestión) a
+              medida de cada empresa para monitorear la rentabilidad por cada
+              unidad de negocio/producto/servicio.
             </CardDescription>
           </CardContent>
         </Card>
-      </section>
+      </Section>
 
       {/* Team Section */}
-      <section className="py-16 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-8">Nuestro equipo</h2>
-        <div className="container mx-auto px-4 grid gap-8 md:grid-cols-3">
-          {[1,2,3].map((member) => (
-            <div key={member} className="flex flex-col items-center text-center space-y-2">
-              <div className="w-24 h-24 bg-gray-200 rounded-full" />
+      <Section className="bg-gray-50">
+        <h2 className="mb-8 text-center text-3xl font-bold">Nuestro equipo</h2>
+        <div className="container grid gap-8 md:grid-cols-3">
+          {[1, 2, 3].map((member) => (
+            <div
+              key={member}
+              className="flex flex-col items-center space-y-2 text-center"
+            >
+              <div className="h-24 w-24 rounded-full bg-gray-200" />
               <p className="font-semibold">Nombre del integrante</p>
               <p className="text-sm text-gray-600">Rol</p>
             </div>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* Contact Section */}
-      <section className="py-16" id="contacto">
-        <h2 className="text-3xl font-bold text-center mb-8">Contacto</h2>
+      <Section id="contacto">
+        <h2 className="mb-8 text-center text-3xl font-bold">Contacto</h2>
         <div className="flex flex-col items-center space-y-4">
           <p>Email: contacto@empresa.com</p>
           <p>Teléfono: +1 234 567 890</p>
           <Button>Solicitar información</Button>
         </div>
-      </section>
+      </Section>
     </main>
   );
 }
