@@ -10,10 +10,10 @@ import {
   Twitter, 
   Facebook, 
   Instagram,
-  BarChart3,
   Send
 } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const footerLinks = {
   servicios: [
@@ -77,10 +77,18 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
-              <BarChart3 className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
-                Consultoría Elite
-              </span>
+              {/* Placeholder logo. Replace `prisma360-logo.svg` with actual logo file. */}
+              <Image
+                src="/prisma360-logo.svg"
+                alt="Prisma360 Consultora logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <div className="leading-tight">
+                <span className="block text-xl font-bold text-primary">prisma360</span>
+                <span className="block text-xs text-brand">consultora</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm">
               Transformamos empresas mediante estrategias de crecimiento basadas en datos, 

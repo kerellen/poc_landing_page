@@ -108,9 +108,9 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold">
-              Transformamos empresas con
+              Soluciones integrales para
               <span className="block mt-2 bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
-                estrategias basadas en datos
+                decisiones estratégicas
               </span>
             </h1>
             
