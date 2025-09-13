@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-
+import { sectionsConfig } from "@/config/sections";
 const navItems = [
   { href: "#inicio", label: "Inicio" },
   { href: "#servicios", label: "Servicios" },
   { href: "#nosotros", label: "Nosotros" },
-  { href: "#estadisticas", label: "Logros" },
-  { href: "#testimonios", label: "Testimonios" },
-  { href: "#casos-exito", label: "Casos de Éxito" },
+  ...(sectionsConfig.stats ? [{ href: "#estadisticas", label: "Logros" }] : []),
+  ...(sectionsConfig.testimonials ? [{ href: "#testimonios", label: "Testimonios" }] : []),
+  ...(sectionsConfig.successStories ? [{ href: "#casos-exito", label: "Casos de Éxito" }] : []),
   { href: "#equipo", label: "Equipo" },
   { href: "#faq", label: "FAQ" },
   { href: "#contacto", label: "Contacto" },

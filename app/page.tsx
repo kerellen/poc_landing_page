@@ -18,6 +18,7 @@ import { Footer } from "@/components/footer";
 import { Stats } from "@/components/stats";
 import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
+import { sectionsConfig } from "@/config/sections";
 import {
   LineChart,
   ClipboardList,
@@ -257,37 +258,43 @@ export default function Home() {
         </Section>
 
         {/* Stats Section */}
-        <Section id="estadisticas" className="bg-gradient-to-br from-primary/5 via-transparent to-brand/5">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Nuestros Logros</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Números que respaldan nuestra experiencia y compromiso con el éxito
-            </p>
-          </div>
-          <Stats />
-        </Section>
+        {sectionsConfig.stats && (
+          <Section id="estadisticas" className="bg-gradient-to-br from-primary/5 via-transparent to-brand/5">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">Nuestros Logros</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Números que respaldan nuestra experiencia y compromiso con el éxito
+              </p>
+            </div>
+            <Stats />
+          </Section>
+        )}
 
         {/* Testimonials Section */}
-        <Section id="testimonios">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Lo que dicen nuestros clientes</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Historias reales de transformación y éxito empresarial
-            </p>
-          </div>
-          <Testimonials />
-        </Section>
+        {sectionsConfig.testimonials && (
+          <Section id="testimonios">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">Lo que dicen nuestros clientes</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Historias reales de transformación y éxito empresarial
+              </p>
+            </div>
+            <Testimonials />
+          </Section>
+        )}
 
         {/* Success Stories Carousel */}
-        <Section id="casos-exito" className="bg-muted/30">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Casos de Éxito</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Transformaciones reales con resultados medibles y sostenibles
-            </p>
-          </div>
-          <Carousel />
-        </Section>
+        {sectionsConfig.successStories && (
+          <Section id="casos-exito" className="bg-muted/30">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">Casos de Éxito</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Transformaciones reales con resultados medibles y sostenibles
+              </p>
+            </div>
+            <Carousel />
+          </Section>
+        )}
 
         {/* Team Section */}
         <Section id="equipo">
