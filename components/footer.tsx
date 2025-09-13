@@ -2,18 +2,19 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
   Instagram,
   Send
 } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { sectionsConfig } from "@/config/sections";
 
 const footerLinks = {
   servicios: [
@@ -26,8 +27,12 @@ const footerLinks = {
   empresa: [
     { label: "Sobre Nosotros", href: "#nosotros" },
     { label: "Nuestro Equipo", href: "#equipo" },
-    { label: "Casos de Éxito", href: "#casos-exito" },
-    { label: "Testimonios", href: "#testimonios" },
+    ...(sectionsConfig.successStories
+      ? [{ label: "Casos de Éxito", href: "#casos-exito" }]
+      : []),
+    ...(sectionsConfig.testimonials
+      ? [{ label: "Testimonios", href: "#testimonios" }]
+      : []),
     { label: "Blog", href: "#" },
   ],
   recursos: [
