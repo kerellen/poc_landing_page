@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const testimonials = [
@@ -11,8 +12,9 @@ const testimonials = [
     role: "CEO",
     company: "TechnoVision S.A.",
     rating: 5,
-    content: "La consultoría fue fundamental para optimizar nuestros procesos. Logramos reducir costos en un 35% y mejorar la eficiencia operativa significativamente. El equipo demostró un profundo conocimiento del sector.",
-    image: "CM",
+    content:
+      "La consultoría fue fundamental para optimizar nuestros procesos. Logramos reducir costos en un 35% y mejorar la eficiencia operativa significativamente. El equipo demostró un profundo conocimiento del sector.",
+    image: "/empleado1.png",
   },
   {
     id: 2,
@@ -82,9 +84,19 @@ export function Testimonials() {
 
             {/* Author */}
             <div className="flex items-center space-x-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-brand text-white font-semibold">
-                {testimonial.image}
-              </div>
+              {testimonial.image.startsWith("/") ? (
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-full object-cover"
+                />
+              ) : (
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-brand text-white font-semibold">
+                  {testimonial.image}
+                </div>
+              )}
               <div>
                 <p className="font-semibold text-sm">{testimonial.name}</p>
                 <p className="text-xs text-muted-foreground">
