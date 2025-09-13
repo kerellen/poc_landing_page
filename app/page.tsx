@@ -350,17 +350,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="container mt-12">
-            <div className="aspect-video w-full">
-              <iframe
-                className="w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Presentación de Martín Latorre"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
         </Section>
 
         {/* FAQ Section */}
