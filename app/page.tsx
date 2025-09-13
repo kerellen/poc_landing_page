@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
 import {
   Card,
@@ -298,9 +299,13 @@ export default function Home() {
           </div>
           <div className="container grid gap-8 md:grid-cols-3 items-start">
             <div className="flex flex-col items-center space-y-4 text-center md:col-span-1">
-              <div className="h-32 w-32 rounded-full bg-muted flex items-center justify-center">
-                <span className="text-sm text-muted-foreground">Foto</span>
-              </div>
+              <Image
+                src="/empleado1.jpg"
+                alt="Martín Latorre"
+                width={128}
+                height={128}
+                className="h-32 w-32 rounded-full object-cover"
+              />
               <div className="space-y-1">
                 <p className="font-semibold text-lg">Martín Latorre</p>
                 <p className="text-sm text-primary font-medium">Socio fundador</p>
