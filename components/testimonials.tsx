@@ -14,7 +14,7 @@ const testimonials = [
     rating: 5,
     content:
       "La consultoría fue fundamental para optimizar nuestros procesos. Logramos reducir costos en un 35% y mejorar la eficiencia operativa significativamente. El equipo demostró un profundo conocimiento del sector.",
-    image: "/empleado1.png",
+    image: "/empleado1.jpg",
   },
   {
     id: 2,
