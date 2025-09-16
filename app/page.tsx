@@ -18,6 +18,7 @@ import { Footer } from "@/components/footer";
 import { Stats } from "@/components/stats";
 import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
+import { Pilares } from "@/components/pilares";
 import { sectionsConfig } from "@/config/sections";
 import {
   LineChart,
@@ -171,7 +172,21 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* About Section 
+        {/* Pillars Section */}
+        <Section id="pilares" className="bg-muted/30">
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold">Pilares de éxito empresarial</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Nuestra metodología integral conecta cada servicio para construir una visión
+                360° que impulsa el crecimiento sostenido de las organizaciones.
+              </p>
+            </div>
+            <Pilares />
+          </div>
+        </Section>
+
+        {/* About Section
         <Section id="nosotros" className="bg-muted/30">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">Crecimiento empresarial desde un enfoque integra</h2>
