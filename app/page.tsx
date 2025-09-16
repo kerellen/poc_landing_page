@@ -29,7 +29,12 @@ import {
   ArrowRight,
   Sparkles,
   Users,
-  CheckCircle
+  CheckCircle,
+  FileSearch,
+  ClipboardCheck,
+  BarChart3,
+  Rocket,
+  Radar,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -107,16 +112,102 @@ const services = [
   },
 ];
 
+const actionPlanSteps = [
+  {
+    icon: FileSearch,
+    title: "Diagnóstico",
+    description: "Reuniones de relevamiento y solicitud de información.",
+    details: [
+      "Procesamiento y análisis de la información suministrada.",
+    ],
+    gradient: "from-[#12325A] to-[#1F4E8C]",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Planificación",
+    description: "Se define el plan de acción a implementar.",
+    details: [
+      "Acciones priorizadas según las necesidades primarias y secundarias.",
+    ],
+    gradient: "from-[#B55F09] to-[#D97A0B]",
+  },
+  {
+    icon: BarChart3,
+    title: "Desarrollo",
+    description: "Elaboración y parametrización de reportes.",
+    details: ["P&L, cash flow, budgets, pricing, KPIs, etc."],
+    gradient: "from-[#0F2B59] to-[#1A3F7A]",
+  },
+  {
+    icon: Rocket,
+    title: "Puesta en Marcha",
+    description:
+      "Implementación de los reportes consensuados adaptados a cada cliente.",
+    details: ["Presentaciones semanales, mensuales y trimestrales."],
+    gradient: "from-[#175C8C] to-[#1E7FB7]",
+  },
+  {
+    icon: Radar,
+    title: "Monitoreo Continuo",
+    description: "Monitoreo y evaluación continua de resultados.",
+    details: [
+      "Identificación de oportunidades de mejora y automatización de procesos.",
+    ],
+    gradient: "from-[#0B1F3D] to-[#12375F]",
+  },
+];
+
 export default function Home() {
   useEffect(() => {
     // Add smooth scroll behavior
     document.documentElement.style.scrollBehavior = "smooth";
   }, []);
 
+  const renderActionPlanCard = (
+    step: (typeof actionPlanSteps)[number],
+    index: number
+  ) => {
+    const Icon = step.icon;
+    return (
+      <Card
+        key={step.title}
+        className={cn(
+          "relative min-w-[260px] lg:min-w-0 snap-center border-none text-white shadow-xl overflow-hidden",
+          "bg-gradient-to-br",
+          step.gradient,
+          "transition-transform duration-500 hover:-translate-y-2",
+          "animate-in fade-in slide-in-from-bottom-4 fill-mode-both"
+        )}
+        style={{ animationDelay: `${index * 100}ms` }}
+      >
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),_transparent_65%)]" />
+        <CardHeader className="relative space-y-4">
+          <div className="inline-flex items-center justify-center rounded-lg bg-white/15 p-3 backdrop-blur-sm">
+            <Icon className="h-6 w-6 text-white" />
+          </div>
+          <CardTitle className="text-xl text-white">{step.title}</CardTitle>
+          <CardDescription className="text-sm text-white/80">
+            {step.description}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="relative space-y-3 text-white/90">
+          <ul className="space-y-2">
+            {step.details.map((detail) => (
+              <li key={detail} className="flex items-start gap-2 text-sm">
+                <ArrowRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-white/80" />
+                <span>{detail}</span>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
+    );
+  };
+
   return (
     <>
       <Navigation />
-      
+
       <main className="font-sans pt-16">
         {/* Hero Section */}
         <Section id="inicio" className="relative min-h-[80vh] flex items-center justify-center text-center overflow-hidden">
@@ -262,6 +353,36 @@ export default function Home() {
                 </Card>
               );
             })}
+          </div>
+        </Section>
+
+        {/* Action Plan Section */}
+        <Section
+          id="plan-accion"
+          className="bg-gradient-to-br from-primary/5 via-transparent to-brand/10"
+        >
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">Plan de Acción</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Acompañamos cada etapa para asegurar una implementación efectiva y
+              resultados sostenibles.
+            </p>
+          </div>
+
+          <div className="container">
+            <div className="hidden lg:grid gap-6 lg:grid-cols-3 xl:grid-cols-5">
+              {actionPlanSteps.map((step, index) =>
+                renderActionPlanCard(step, index)
+              )}
+            </div>
+
+            <div className="lg:hidden -mx-4 px-4">
+              <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
+                {actionPlanSteps.map((step, index) =>
+                  renderActionPlanCard(step, index)
+                )}
+              </div>
+            </div>
           </div>
         </Section>
 

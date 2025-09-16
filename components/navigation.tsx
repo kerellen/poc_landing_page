@@ -9,6 +9,7 @@ import { sectionsConfig } from "@/config/sections";
 const navItems = [
   { href: "#inicio", label: "Inicio" },
   { href: "#servicios", label: "Servicios" },
+  { href: "#plan-accion", label: "Plan de Acción" },
   { href: "#nosotros", label: "Nosotros" },
   ...(sectionsConfig.stats ? [{ href: "#estadisticas", label: "Logros" }] : []),
   ...(sectionsConfig.testimonials ? [{ href: "#testimonios", label: "Testimonios" }] : []),

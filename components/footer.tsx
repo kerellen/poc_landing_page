@@ -24,9 +24,8 @@ const footerLinks = {
     { label: "Análisis de Rentabilidad", href: "#servicios" },
   ],
   empresa: [
-  
+    { label: "Plan de Acción", href: "#plan-accion" },
     { label: "Nuestro Equipo", href: "#equipo" },
-  
   ],
   recursos: [
     { label: "Guías Gratuitas", href: "#" },
