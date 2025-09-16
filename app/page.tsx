@@ -172,7 +172,7 @@ export default function Home() {
       <Card
         key={step.title}
         className={cn(
-          "relative min-w-[260px] lg:min-w-0 snap-center border-none text-white shadow-xl overflow-hidden",
+          "relative w-full min-w-[260px] lg:min-w-0 snap-center border-none text-white shadow-xl overflow-hidden",
           "bg-gradient-to-br",
           step.gradient,
           "transition-transform duration-500 hover:-translate-y-2",
@@ -318,7 +318,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="container mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -369,19 +369,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="container">
+          <div className="container mx-auto">
             <div className="hidden lg:grid gap-6 lg:grid-cols-3 xl:grid-cols-5">
               {actionPlanSteps.map((step, index) =>
                 renderActionPlanCard(step, index)
               )}
             </div>
 
-            <div className="lg:hidden -mx-4 px-4">
-              <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
-                {actionPlanSteps.map((step, index) =>
-                  renderActionPlanCard(step, index)
-                )}
-              </div>
+            <div className="lg:hidden space-y-4 max-w-2xl mx-auto">
+              {actionPlanSteps.map((step, index) =>
+                renderActionPlanCard(step, index)
+              )}
             </div>
           </div>
         </Section>
