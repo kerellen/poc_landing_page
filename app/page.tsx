@@ -131,6 +131,8 @@ export default function Home() {
               Líderes en Consultoría Empresarial
             </div>
             
+            
+
             <h1 className="text-5xl md:text-6xl font-bold">
               <span className="block mt-2 bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
                 Pilares del éxito organizacional
@@ -143,6 +145,9 @@ export default function Home() {
               financiero sustentable, garantizar una administración eficiente y
               promover una reingeniería continua de los procesos.
             </p>
+
+            <Pilares />
+
             {/*
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button size="lg" className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group">
@@ -170,21 +175,11 @@ export default function Home() {
               </div>
             </div>*/}
           </div>
+     
+
         </Section>
 
-        {/* Pillars Section */}
-        <Section id="pilares" className="bg-muted/30">
-          <div className="max-w-5xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Pilares de éxito empresarial</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Nuestra metodología integral conecta cada servicio para construir una visión
-                360° que impulsa el crecimiento sostenido de las organizaciones.
-              </p>
-            </div>
-            <Pilares />
-          </div>
-        </Section>
+
 
         {/* About Section
         <Section id="nosotros" className="bg-muted/30">

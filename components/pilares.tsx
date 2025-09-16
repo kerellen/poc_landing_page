@@ -25,11 +25,6 @@ const pillars = [
     position: { top: "74%", left: "87%" },
   },
   {
-    icon: Settings,
-    title: "Mejora de Procesos",
-    position: { top: "94%", left: "50%" },
-  },
-  {
     icon: Leaf,
     title: "Eficiencia Energética",
     position: { top: "74%", left: "13%" },
@@ -66,12 +61,12 @@ export function Pilares() {
         </svg>
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-32 h-32 rounded-full bg-white shadow-xl flex items-center justify-center">
+          <div className="relative w-150 h-150  flex items-center justify-center">
             <Image
               src="/logoPrisma360.png"
               alt="Logo"
               fill
-              sizes="128px"
+              sizes="720px"
               className="object-contain p-3"
             />
           </div>
