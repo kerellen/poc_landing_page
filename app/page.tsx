@@ -16,7 +16,6 @@ import { Testimonials } from "@/components/testimonials";
 import { Carousel } from "@/components/carousel";
 import { Footer } from "@/components/footer";
 import { Stats } from "@/components/stats";
-import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
 import { Pilares } from "@/components/pilares";
 import { sectionsConfig } from "@/config/sections";
@@ -28,7 +27,6 @@ import {
   Leaf,
   Mail,
   ArrowRight,
-  Target,
   Sparkles,
   Users,
   CheckCircle
@@ -374,19 +372,8 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* FAQ Section */}
-        <Section id="faq" className="bg-muted/30">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Preguntas Frecuentes</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Respuestas a las consultas más comunes sobre nuestros servicios
-            </p>
-          </div>
-          <FAQ />
-        </Section>
-
         {/* CTA Section */}
-        <Section>
+        <Section id="transformacion">
           <CTA />
         </Section>
 

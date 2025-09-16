@@ -14,7 +14,6 @@ const navItems = [
   ...(sectionsConfig.testimonials ? [{ href: "#testimonios", label: "Testimonios" }] : []),
   ...(sectionsConfig.successStories ? [{ href: "#casos-exito", label: "Casos de Éxito" }] : []),
   { href: "#equipo", label: "Equipo" },
-  { href: "#faq", label: "FAQ" },
   { href: "#contacto", label: "Contacto" },
 ];
 
@@ -30,6 +29,14 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleCTAButtonClick = () => {
+    const ctaSection = document.querySelector("#transformacion");
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -79,7 +86,10 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <Button className="ml-4 bg-gradient-to-r from-primary to-brand hover:opacity-90 transition-opacity">
+            <Button
+              onClick={handleCTAButtonClick}
+              className="ml-4 bg-gradient-to-r from-primary to-brand hover:opacity-90 transition-opacity"
+            >
               Consulta Gratuita
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
@@ -112,7 +122,10 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <Button className="mx-4 bg-gradient-to-r from-primary to-brand hover:opacity-90 transition-opacity">
+            <Button
+              onClick={handleCTAButtonClick}
+              className="mx-4 bg-gradient-to-r from-primary to-brand hover:opacity-90 transition-opacity"
+            >
               Consulta Gratuita
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
