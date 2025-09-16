@@ -158,6 +158,7 @@ const actionPlanSteps = [
 ];
 
 export default function Home() {
+
   useEffect(() => {
     // Add smooth scroll behavior
     document.documentElement.style.scrollBehavior = "smooth";
@@ -507,7 +508,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               <Card className="border-muted/50 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 text-center space-y-2">
                   <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-2">
@@ -528,20 +529,21 @@ export default function Home() {
                 </CardContent>
               </Card>
               
-{/*
-              <Card className="border-muted/50 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 text-center space-y-2">
-                  <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-2">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                  <p className="font-semibold">Oficina</p>
-                  <p className="text-sm text-muted-foreground">Madrid, España</p>
-                </CardContent>
-              </Card>
-*/}
+
             </div>
             
-            <Button size="lg" className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group"
+              onClick={() => {
+                const el = document.getElementById("transformacion");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                } else {
+                  window.location.hash = "#transformacion";
+                }
+              }}
+            >
               Solicitar Consulta Gratuita
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
