@@ -79,7 +79,7 @@ export function Pilares() {
             <div className="flex h-16 w-16 items-center justify-center rounded-full border border-primary/20 bg-white shadow-lg">
               <Icon className="h-8 w-8 text-primary" />
             </div>
-            <span className="mt-3 max-w-[8rem] text-xs font-semibold uppercase tracking-wide text-primary">
+            <span className="mt-3 max-w-[10rem] text-xs font-semibold uppercase tracking-wide text-primary px-2 py-1 rounded drop-shadow-lg text-stroke-orange">
               {title}
             </span>
           </div>
