@@ -2,38 +2,31 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
   Instagram,
   Send
 } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import { sectionsConfig } from "@/config/sections";
 
 const footerLinks = {
   servicios: [
-    { label: "Planificación Económico Financiera", href: "#servicios" },
-    { label: "Outsourcing Administrativo", href: "#servicios" },
-    { label: "Administración Patrimonial", href: "#servicios" },
-    { label: "Mejora de Procesos", href: "#servicios" },
-    { label: "Eficiencia Energética", href: "#servicios" },
+    { label: "Estrategia y Crecimiento", href: "#servicios" },
+    { label: "Análisis de Procesos", href: "#servicios" },
+    { label: "Auditoría de Costos", href: "#servicios" },
+    { label: "Análisis Financiero", href: "#servicios" },
+    { label: "Análisis de Rentabilidad", href: "#servicios" },
   ],
   empresa: [
-    { label: "Sobre Nosotros", href: "#nosotros" },
+  
     { label: "Nuestro Equipo", href: "#equipo" },
-    ...(sectionsConfig.successStories
-      ? [{ label: "Casos de Éxito", href: "#casos-exito" }]
-      : []),
-    ...(sectionsConfig.testimonials
-      ? [{ label: "Testimonios", href: "#testimonios" }]
-      : []),
-    { label: "Blog", href: "#" },
+  
   ],
   recursos: [
     { label: "Guías Gratuitas", href: "#" },
@@ -44,12 +37,13 @@ const footerLinks = {
   ],
 };
 
+{/*
 const socialLinks = [
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-];
+];*/}
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -82,7 +76,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
-              {/* Logo */}
+              {/* Placeholder logo. Replace `prisma360-logo.svg` with actual logo file. */}
               <Image
                 src="/logoPrisma360.png"
                 alt="Prisma360 Consultora logo"
@@ -100,7 +94,7 @@ export function Footer() {
               optimización de procesos y análisis financiero profundo. Su éxito es nuestra misión.
             </p>
             
-            {/* Newsletter */}
+            {/* Newsletter 
             <div className="space-y-2">
               <p className="text-sm font-semibold">Suscríbete a nuestro newsletter</p>
               <form onSubmit={handleSubscribe} className="flex space-x-2">
@@ -121,9 +115,9 @@ export function Footer() {
                   ¡Gracias por suscribirte!
                 </p>
               )}
-            </div>
+            </div>*/}
 
-            {/* Social Links */}
+            {/* Social Links 
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -140,7 +134,7 @@ export function Footer() {
                   </a>
                 );
               })}
-            </div>
+            </div>*/}
           </div>
 
           {/* Links Sections */}
@@ -201,15 +195,11 @@ export function Footer() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
             <div className="flex items-center space-x-3 text-sm text-muted-foreground">
               <Mail className="h-4 w-4 text-primary" />
-              <span>contacto@consultoriaelite.com</span>
+              <span>contacto@prisma360.com.ar</span>
             </div>
             <div className="flex items-center space-x-3 text-sm text-muted-foreground">
               <Phone className="h-4 w-4 text-primary" />
-              <span>+34 900 123 456</span>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4 text-primary" />
-              <span>Madrid, España</span>
+              <span>+54 11 6231 5913</span>
             </div>
             <div className="flex items-center space-x-3 text-sm text-muted-foreground">
               <span>Lun - Vie: 9:00 - 18:00</span>
@@ -218,7 +208,7 @@ export function Footer() {
 
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 Consultoría Elite. Todos los derechos reservados.
+              © 2025 prisma360. Todos los derechos reservados.
             </p>
             <div className="flex space-x-4 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">

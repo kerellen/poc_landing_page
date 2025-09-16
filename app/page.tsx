@@ -131,18 +131,18 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold">
-              Soluciones integrales para
               <span className="block mt-2 bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
-                decisiones estratégicas
+                Pilares del éxito organizacional
               </span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Para implementar una estrategia de crecimiento exitosa, es esencial
-              monitorear la rentabilidad por cada producto, por cada cliente y por
-              cada unidad de negocio junto con un flujo financiero sustentable.
+              En Prisma 360, entendemos que para implementar una estrategia
+              de crecimiento exitosa es fundamental mantener un flujo
+              financiero sustentable, garantizar una administración eficiente y
+              promover una reingeniería continua de los procesos.
             </p>
-            
+            {/*
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button size="lg" className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group">
                 Consulta Gratuita
@@ -153,7 +153,7 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Trust Indicators */}
+     
             <div className="flex flex-wrap justify-center gap-8 pt-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
@@ -167,14 +167,14 @@ export default function Home() {
                 <CheckCircle className="h-5 w-5 text-primary" />
                 <span>98% Satisfacción</span>
               </div>
-            </div>
+            </div>*/}
           </div>
         </Section>
 
-        {/* About Section */}
+        {/* About Section 
         <Section id="nosotros" className="bg-muted/30">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Sobre Nosotros</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Crecimiento empresarial desde un enfoque integra</h2>
             <p className="text-lg text-muted-foreground">
               Con más de 12 años de experiencia, somos líderes en consultoría estratégica 
               y transformación empresarial. Nuestro equipo multidisciplinario combina 
@@ -208,7 +208,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </Section>
+        </Section>*/}
 
         {/* Services Section */}
         <Section id="servicios">
@@ -398,7 +398,7 @@ export default function Home() {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-sm text-muted-foreground">contacto@consultoriaelite.com</p>
+                  <p className="text-sm text-muted-foreground">contacto@prisma360.com.ar</p>
                 </CardContent>
               </Card>
               
@@ -408,10 +408,11 @@ export default function Home() {
                     <Users className="h-6 w-6 text-primary" />
                   </div>
                   <p className="font-semibold">Teléfono</p>
-                  <p className="text-sm text-muted-foreground">+34 900 123 456</p>
+                  <p className="text-sm text-muted-foreground">+54 11 6231 5913</p>
                 </CardContent>
               </Card>
               
+{/*
               <Card className="border-muted/50 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 text-center space-y-2">
                   <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-2">
@@ -421,6 +422,7 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">Madrid, España</p>
                 </CardContent>
               </Card>
+*/}
             </div>
             
             <Button size="lg" className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group">
