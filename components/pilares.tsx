@@ -3,7 +3,6 @@ import {
   ClipboardList,
   Leaf,
   LineChart,
-  Settings,
   Target,
   Wallet,
 } from "lucide-react";
@@ -39,7 +38,7 @@ const pillars = [
 export function Pilares() {
   return (
     <div className="relative w-full max-w-3xl mx-auto">
-      <div className="relative aspect-square">
+      <div className="relative aspect-square hidden sm:block">
         <svg
           viewBox="0 0 200 200"
           className="w-full h-full text-primary/30"
@@ -86,6 +85,35 @@ export function Pilares() {
             </span>
           </div>
         ))}
+      </div>
+
+      <div className="flex flex-col items-center gap-6 sm:hidden">
+        <div className="relative h-36 w-36">
+          <Image
+            src="/logoPrisma360.png"
+            alt="Logo Prisma 360"
+            fill
+            sizes="(max-width: 640px) 100vw, 640px"
+            className="object-contain"
+            priority
+          />
+        </div>
+
+        <div className="grid w-full max-w-md gap-4">
+          {pillars.map(({ icon: Icon, title }) => (
+            <div
+              key={title}
+              className="flex items-center gap-3 rounded-2xl border border-primary/10 bg-white/90 p-4 shadow-sm backdrop-blur"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/20 bg-white">
+                <Icon className="h-6 w-6 text-primary" />
+              </div>
+              <span className="text-sm font-semibold uppercase tracking-wide text-primary">
+                {title}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
