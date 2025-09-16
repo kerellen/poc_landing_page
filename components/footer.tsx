@@ -27,13 +27,6 @@ const footerLinks = {
     { label: "Plan de Acción", href: "#plan-accion" },
     { label: "Nuestro Equipo", href: "#equipo" },
   ],
-  recursos: [
-    { label: "Guías Gratuitas", href: "#" },
-    { label: "Webinars", href: "#" },
-    { label: "Calculadoras", href: "#" },
-    { label: "Templates", href: "#" },
-    { label: "FAQ", href: "#faq" },
-  ],
 };
 
 {/*
@@ -158,23 +151,6 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-2">
               {footerLinks.empresa.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={handleNavClick}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Recursos</h3>
-            <ul className="space-y-2">
-              {footerLinks.recursos.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
