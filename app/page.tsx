@@ -224,7 +224,7 @@ export default function Home() {
             
 
             <h1 className="text-5xl md:text-6xl font-bold">
-              <span className="block mt-2 bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] bg-clip-text text-transparent">
+              <span className="block mt-2 text-[#17384E]">
                 Pilares del éxito organizacional
               </span>
             </h1>
@@ -534,7 +534,7 @@ export default function Home() {
             
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 group"
+              className="bg-[#377987] hover:bg-[#2f6775] transition-colors group"
               onClick={() => {
                 const el = document.getElementById("transformacion");
                 if (el) {
