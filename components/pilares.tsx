@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import {
   ClipboardList,
-  Leaf,
   LineChart,
   Target,
   Wallet,
+  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +28,7 @@ const pillars = [
     position: { top: "74%", left: "87%" },
   },
   {
-    icon: Leaf,
+    icon: Zap,
     title: "Eficiencia Energética",
     position: { top: "74%", left: "13%" },
   },
@@ -40,14 +40,14 @@ const pillars = [
 ] as const;
 
 export function Pilares() {
-  const [viewMode, setViewMode] = useState<"diagram" | "cards">("diagram");
+  const [viewMode, setViewMode] = useState<"diagram" | "cards">("cards");
 
   const toggleViewMode = () =>
     setViewMode((prev) => (prev === "diagram" ? "cards" : "diagram"));
 
   return (
     <div className="relative mx-auto mt-12 flex w-full max-w-3xl flex-col gap-6">
-      <div className="flex justify-end">
+      <div className="hidden">
         <Button onClick={toggleViewMode} variant="outline">
           {viewMode === "diagram" ? "Ver como cards" : "Ver como diagrama"}
         </Button>
