@@ -1,18 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram,
-  Send
-} from "lucide-react";
-import { useState } from "react";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 
 const footerLinks = {
@@ -38,18 +26,6 @@ const socialLinks = [
 ];*/}
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setTimeout(() => setSubscribed(false), 3000);
-      setEmail("");
-    }
-  };
-
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const href = e.currentTarget.getAttribute("href");
     if (href && href.startsWith("#")) {
