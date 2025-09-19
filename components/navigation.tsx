@@ -89,7 +89,7 @@ export function Navigation() {
             ))}
             <Button
               onClick={handleCTAButtonClick}
-              className="ml-4 bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 transition-opacity"
+              className="ml-4 bg-[#377987] hover:bg-[#2f6775] transition-colors"
             >
               Consulta Gratuita
               <ChevronRight className="ml-2 h-4 w-4" />
@@ -125,7 +125,7 @@ export function Navigation() {
             ))}
             <Button
               onClick={handleCTAButtonClick}
-              className="mx-4 bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 transition-opacity"
+              className="mx-4 bg-[#377987] hover:bg-[#2f6775] transition-colors"
             >
               Consulta Gratuita
               <ChevronRight className="ml-2 h-4 w-4" />

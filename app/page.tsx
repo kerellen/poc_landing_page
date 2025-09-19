@@ -534,7 +534,7 @@ export default function Home() {
             
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 group"
+              className="bg-[#377987] hover:bg-[#2f6775] transition-colors group"
               onClick={() => {
                 const el = document.getElementById("transformacion");
                 if (el) {
