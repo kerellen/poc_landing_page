@@ -224,7 +224,7 @@ export default function Home() {
             
 
             <h1 className="text-5xl md:text-6xl font-bold">
-              <span className="block mt-2 bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] bg-clip-text text-transparent">
+              <span className="block mt-2 text-[#17384E]">
                 Pilares del éxito organizacional
               </span>
             </h1>
