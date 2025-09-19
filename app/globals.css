@@ -3,6 +3,14 @@
 
 @import "tw-animate-css";
 
+/* Prisma 360 color palette
+   Navy (primary)   — #1B2A4A
+   Teal (secondary) — #0A6F78
+   Orange (brand)   — #F47A32
+   Sky (accent)     — #06B4E0
+   Soft Sky (light) — #E3F5FB
+*/
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
@@ -110,8 +118,8 @@
 
 :root {
   /* Accent colors */
-  --brand: #D97A0B;
-  --brand-foreground: #ffffff;
+  --brand: #F47A32;
+  --brand-foreground: #04111d;
 
   /* Customized shadcn/ui colors */
   --background: oklch(97.65% 0.001 17.18);
@@ -120,24 +128,24 @@
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: #0F2B59;
-  --primary-foreground: #ffffff;
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --primary: #1B2A4A;
+  --primary-foreground: #F6F8FB;
+  --secondary: #0A6F78;
+  --secondary-foreground: #ffffff;
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.927 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
+  --accent: #06B4E0;
+  --accent-foreground: #051927;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.705 0.015 286.067);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-1: #1B2A4A;
+  --chart-2: #0A6F78;
+  --chart-3: #06B4E0;
+  --chart-4: #F47A32;
+  --chart-5: #133852;
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
@@ -149,8 +157,18 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 
   /* Illustrations colors */
-  --light: var(--brand);
-  --light-foreground: var(--brand-foreground);
+  --light: #E3F5FB;
+  --light-foreground: #04111d;
+
+  /* Derived blends for gradients */
+  --primary-soft: color-mix(in oklab, var(--primary) 18%, white 82%);
+  --brand-soft: color-mix(in oklab, var(--brand) 16%, white 84%);
+  --accent-soft: color-mix(in oklab, var(--accent) 14%, white 86%);
+  --primary-accent-blend: color-mix(in oklab, var(--primary) 55%, var(--accent) 45%);
+  --primary-brand-blend: color-mix(in oklab, var(--primary) 48%, var(--brand) 52%);
+  --secondary-accent-blend: color-mix(in oklab, var(--secondary) 58%, var(--accent) 42%);
+  --primary-secondary-blend: color-mix(in oklab, var(--primary) 60%, var(--secondary) 40%);
+  --brand-accent-blend: color-mix(in oklab, var(--brand) 55%, var(--accent) 45%);
 
   /* Shadows */
   --shadow: #00000008;
@@ -159,8 +177,8 @@
 
 .dark {
   /* Accent colors */
-  --brand: #D97A0B;
-  --brand-foreground: #ffffff;
+  --brand: #F47A32;
+  --brand-foreground: #0b1219;
 
   /* Customized shadcn/ui colors */
   --background: oklch(0.141 0.005 285.823);
@@ -169,24 +187,24 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.141 0.005 285.823);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #0F2B59;
-  --primary-foreground: #ffffff;
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
+  --primary: #1B2A4A;
+  --primary-foreground: #F1F5FA;
+  --secondary: #0A6F78;
+  --secondary-foreground: #E9FBFF;
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: #06B4E0;
+  --accent-foreground: #031019;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.885 0.006 286.033);
   --input: oklch(0.274 0.006 286.033);
   --ring: oklch(0.442 0.017 285.786);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --chart-1: #06B4E0;
+  --chart-2: #3AC0C8;
+  --chart-3: #F47A32;
+  --chart-4: #1B2A4A;
+  --chart-5: #0A6F78;
   --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -197,8 +215,18 @@
   --sidebar-ring: oklch(0.442 0.017 285.786);
 
   /* Illustrations colors */
-  --light: var(--foreground);
-  --light-foreground: var(--foreground);
+  --light: color-mix(in oklab, var(--accent) 45%, black 55%);
+  --light-foreground: #E3F5FB;
+
+  /* Derived blends for gradients */
+  --primary-soft: color-mix(in oklab, var(--primary) 38%, black 62%);
+  --brand-soft: color-mix(in oklab, var(--brand) 35%, black 65%);
+  --accent-soft: color-mix(in oklab, var(--accent) 42%, black 58%);
+  --primary-accent-blend: color-mix(in oklab, var(--primary) 45%, var(--accent) 55%);
+  --primary-brand-blend: color-mix(in oklab, var(--primary) 42%, var(--brand) 58%);
+  --secondary-accent-blend: color-mix(in oklab, var(--secondary) 52%, var(--accent) 48%);
+  --primary-secondary-blend: color-mix(in oklab, var(--primary) 54%, var(--secondary) 46%);
+  --brand-accent-blend: color-mix(in oklab, var(--brand) 50%, var(--accent) 50%);
 
   /* Shadows */
   --shadow: #00000020;

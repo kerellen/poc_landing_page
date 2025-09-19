@@ -98,7 +98,7 @@ export function Footer() {
                   className="flex-1"
                   required
                 />
-                <Button type="submit" size="sm" className="bg-gradient-to-r from-primary to-brand hover:opacity-90 px-3">
+                <Button type="submit" size="sm" className="bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 px-3">
                   <Send className="h-4 w-4" />
                 </Button>
               </form>

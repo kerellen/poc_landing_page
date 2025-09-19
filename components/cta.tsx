@@ -15,7 +15,7 @@ export function CTA() {
   };
 
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-brand to-primary p-8 md:p-12 text-center">
+    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--brand)] p-8 md:p-12 text-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-white/10 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       
