@@ -93,7 +93,7 @@ export function Testimonials() {
                   className="h-10 w-10 rounded-full object-cover"
                 />
               ) : (
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-brand text-white font-semibold">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--brand)] text-white font-semibold">
                   {testimonial.image}
                 </div>
               )}

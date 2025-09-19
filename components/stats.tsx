@@ -59,7 +59,7 @@ function Counter({ end, suffix }: { end: number; suffix: string }) {
   }, [end]);
 
   return (
-    <span className="text-4xl font-bold bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
+    <span className="text-4xl font-bold bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] bg-clip-text text-transparent">
       {count}{suffix}
     </span>
   );

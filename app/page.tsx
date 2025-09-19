@@ -120,7 +120,7 @@ const actionPlanSteps = [
     details: [
       "Procesamiento y análisis de la información suministrada.",
     ],
-    gradient: "from-[#12325A] to-[#1F4E8C]",
+    gradient: "from-[var(--primary)] via-[var(--primary-accent-blend)] to-[var(--accent)]",
   },
   {
     icon: ClipboardCheck,
@@ -129,14 +129,14 @@ const actionPlanSteps = [
     details: [
       "Acciones priorizadas según las necesidades primarias y secundarias.",
     ],
-    gradient: "from-[#B55F09] to-[#D97A0B]",
+    gradient: "from-[var(--brand)] via-[var(--brand-accent-blend)] to-[var(--accent)]",
   },
   {
     icon: BarChart3,
     title: "Desarrollo",
     description: "Elaboración y parametrización de reportes.",
     details: ["P&L, cash flow, budgets, pricing, KPIs, etc."],
-    gradient: "from-[#0F2B59] to-[#1A3F7A]",
+    gradient: "from-[var(--primary)] via-[var(--primary-brand-blend)] to-[var(--brand)]",
   },
   {
     icon: Rocket,
@@ -144,7 +144,7 @@ const actionPlanSteps = [
     description:
       "Implementación de los reportes consensuados adaptados a cada cliente.",
     details: ["Presentaciones semanales, mensuales y trimestrales."],
-    gradient: "from-[#175C8C] to-[#1E7FB7]",
+    gradient: "from-[var(--secondary)] via-[var(--secondary-accent-blend)] to-[var(--accent)]",
   },
   {
     icon: Radar,
@@ -153,7 +153,7 @@ const actionPlanSteps = [
     details: [
       "Identificación de oportunidades de mejora y automatización de procesos.",
     ],
-    gradient: "from-[#0B1F3D] to-[#12375F]",
+    gradient: "from-[var(--primary)] via-[var(--primary-secondary-blend)] to-[var(--secondary)]",
   },
 ];
 
@@ -213,7 +213,7 @@ export default function Home() {
         {/* Hero Section */}
         <Section id="inicio" className="relative min-h-[80vh] flex items-center justify-center text-center overflow-hidden">
           {/* Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-brand/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--primary-soft)] via-transparent to-[color:var(--brand-soft)]" />
           
           <div className="relative z-10 max-w-4xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
@@ -224,7 +224,7 @@ export default function Home() {
             
 
             <h1 className="text-5xl md:text-6xl font-bold">
-              <span className="block mt-2 bg-gradient-to-r from-primary to-brand bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] bg-clip-text text-transparent">
                 Pilares del éxito organizacional
               </span>
             </h1>
@@ -240,7 +240,7 @@ export default function Home() {
 
             {/*
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group">
+              <Button size="lg" className="bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 group">
                 Consulta Gratuita
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -360,7 +360,7 @@ export default function Home() {
         {/* Action Plan Section */}
         <Section
           id="plan-accion"
-          className="bg-gradient-to-br from-primary/5 via-transparent to-brand/10"
+          className="bg-gradient-to-br from-[color:var(--primary-soft)] via-transparent to-[color:var(--accent-soft)]"
         >
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold">Plan de Acción</h2>
@@ -387,7 +387,7 @@ export default function Home() {
 
         {/* Stats Section */}
         {sectionsConfig.stats && (
-          <Section id="estadisticas" className="bg-gradient-to-br from-primary/5 via-transparent to-brand/5">
+          <Section id="estadisticas" className="bg-gradient-to-br from-[color:var(--primary-soft)] via-transparent to-[color:var(--brand-soft)]">
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">Nuestros Logros</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -534,7 +534,7 @@ export default function Home() {
             
             <Button
               size="lg"
-              className="bg-gradient-to-r from-primary to-brand hover:opacity-90 group"
+              className="bg-gradient-to-r from-[var(--primary)] to-[var(--brand)] hover:opacity-90 group"
               onClick={() => {
                 const el = document.getElementById("transformacion");
                 if (el) {
