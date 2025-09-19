@@ -24,7 +24,6 @@ import {
   ClipboardList,
   Wallet,
   Settings,
-  Leaf,
   Mail,
   ArrowRight,
   Sparkles,
@@ -35,6 +34,7 @@ import {
   BarChart3,
   Rocket,
   Radar,
+  Zap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -96,7 +96,7 @@ const services = [
     ],
   },
   {
-    icon: Leaf,
+    icon: Zap,
     title: "EFICIENCIA ENERGÉTICA",
     description:
       "Reducimos costos energéticos mediante proyectos de eficiencia, auditorías y gestión continua.",
